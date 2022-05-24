@@ -153,8 +153,9 @@ nav .fa {
         font-size: 22px;
         cursor: pointer;
     }
-    .left.right{
-       font-size: 20px;
+
+    .left.right {
+        font-size: 20px;
         align-items: center;
     }
 
@@ -320,4 +321,30 @@ textarea {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #f44336;
+}
+
+@media(max-width:700px) {
+    .aboutus {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    h1 {
+        padding: 25px;
+    }
+
+    .right {
+        overflow: scroll;
+        display: block;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .left {
+       
+        display: block;
+        width: 90%;
+        padding: 10px;
+    }
 }
