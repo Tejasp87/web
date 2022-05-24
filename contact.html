@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta -->
+    <title>Tejas Patil - Contact</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML1">
+    <meta name="keywords" content="HTML2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/Tejas%20Patil.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Demo.html">Demo Website</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Extra</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="contact">
+            <form class="contactF" action="/action_page.php">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Tejas" input onkeydown="return /[a-z]/i.test(event.key)">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Patil" input onkeydown="return /[a-z]/i.test(event.key)">
+                <label for="email">Email:</label>
+               <input autocomplete="off" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" placeholder="name@example.com" type="text" id="userEmail">
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input class="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+    <!--------------------------------------------------JS for toggle menu--------------------------------------------------------->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+
+</html>

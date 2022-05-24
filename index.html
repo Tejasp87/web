@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta -->
+    <title>Tejas Patil - Resume Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML1">
+    <meta name="keywords" content="HTML2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/Tejas%20Patil.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Demo.html">Demo Website</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Extra</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <a class="tejas"><strong>Tejas Patil</strong></a>
+            <p>Proven skills in completing black, white, and grey box tests. Background writing and implementing test cases,<br> developing testing
+                plans, and identifying use cases. Fully versed in complete SDLC.</p>
+
+            <u> <a href="https://docs.google.com/document/d/19c9aNUR26ETkjCal-Fka5uYDyxCZOIOl/edit?usp=sharing&ouid=110687444631923277563&rtpof=true&sd=true" class="mail-btn" target="_blank"> Download Resume </a> </u>
+            <br><br>
+            <u> <a href="https://www.linkedin.com/in/tejas-patil-0087/" class="lnkdn-btn" target="_blank"> LinkedIn Profile </a> </u>
+
+        </div>
+    </section>
+    <!--------------------------------------------------about--------------------------------------------------------->
+
+
+    <!--------------------------------------------------Demo website--------------------------------------------------------->
+ 
+
+    <!--------------------------------------------------JS for toggle menu--------------------------------------------------------->
+     <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+
+</html>
