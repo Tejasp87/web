@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Meta -->
     <title>Tejas Patil - Contact</title>
@@ -15,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <section class="header">
         <nav>
@@ -33,34 +31,42 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="contact">
-            <form class="contactF" action="/action_page.php">
+            <form name="contactF" class="contactF" >
                 <label for="fname">First name:</label>
                 <input type="text" id="fname" name="fname" placeholder="Tejas" input onkeydown="return /[a-z]/i.test(event.key)">
                 <label for="lname">Last name:</label>
                 <input type="text" id="lname" name="lname" placeholder="Patil" input onkeydown="return /[a-z]/i.test(event.key)">
                 <label for="email">Email:</label>
-               <input autocomplete="off" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" placeholder="name@example.com" type="text" id="userEmail">
+                <input autocomplete="off" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" placeholder="name@example.com" type="text" id="userEmail" name="Email">
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
+                <textarea id="subject" name="subject" placeholder="Type your message or share your feedback , suggestions for improvement..." style="height:200px"></textarea>
                 <input class="submit" type="submit" value="Submit">
             </form>
         </div>
     </section>
-
     <!--------------------------------------------------JS for toggle menu--------------------------------------------------------->
     <script>
         var navLinks = document.getElementById("navLinks");
-
         function showMenu() {
             navLinks.style.right = "0";
         }
-
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
-
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbysIbl4B0JQff6wtceOuAyRaowJXWMB_X6fOvmeVhKf3KwmLCEtRjk4WSS2bEioHApMVw/exec'
+        const form = document.forms['contactF']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
-
 </html>

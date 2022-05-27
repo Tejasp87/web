@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Meta -->
     <title>Tejas Patil - Demo Website</title>
@@ -18,7 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <section class="header">
         <nav>
@@ -80,7 +78,7 @@
                 <textarea placeholder="Address" rows="5" cols="20" id="currentAddress" class="form-control" spellcheck="false"></textarea>
                 <br>
                 <label for="birthday">Birthday:</label>
-                <input class="date" type="date" id="datePickerId" name="birthday" value="09/03/1996" min="1970-01-01" max="0">
+                <input class="date" type="date" id="datePickerId" name="birthday" value="09/03/1996" min="1970-01-01" max="0" data-date-inline-picker="true">
                 <br>
                 <div class="Country">
                     <script type="text/javascript" src="countries.js"></script>
@@ -101,18 +99,14 @@
     <script language="javascript">
         populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
         var navLinks = document.getElementById("navLinks");
-
         function showMenu() {
             navLinks.style.right = "0";
         }
-
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
         src = "./country-states.json"
         datePickerId.max = new Date().toISOString().split("T")[0];
-
     </script>
 </body>
-
 </html>

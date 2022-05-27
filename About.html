@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Meta -->
     <title>Tejas Patil - About</title>
@@ -15,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <section class="header">
         <nav>
@@ -34,7 +32,7 @@
         </nav>
         <div class="aboutus">
             <div class="left">
-                <img src="images/profile-modified.png" alt="picture" width="300" height="300">
+                <img class="selfImg" src="images/profile-modified.png" alt="picture" width="300" height="300">
                 <h1>Quality Assurance Engineer</h1>
                 <ul class="ull">
                     <li>
@@ -46,12 +44,15 @@
                     <li>
                         <strong>Location:</strong>&nbsp;IN
                     </li>
-
                     <li>
                         <strong>Email:</strong>&nbsp;<a class="btn-about" href="mailto:tejasvp87@gmail.com" target="_blank" rel="noopener noreferrer">Send Mail</a>
                     </li>
                     <li>
                         <strong>LinkedIn:</strong>&nbsp;<a class="btn-about" href="https://www.linkedin.com/in/tejas-patil-0087/" target="_blank" rel="noopener noreferrer">Tejas-Patil-0087</a>
+<!--
+                           <a href="https://www.linkedin.com/in/tejas-patil-0087/" target="_blank" rel="noopener noreferrer">
+                               <img border="0" alt="W3Schools" src="images/linkedin%20.png" width="30" height="30">
+-->
                     </li>
                 </ul>
             </div>
@@ -62,7 +63,6 @@
                 <hr>
                 <h2 id="skills"><strong>Skills</strong></h2>
                 <p align="center">
-
                     <img class="testing" src="images/clipart1542261.png" alt="Software-testing" width="40" height="40">
                     <img src="images/selenium-logo.svg" alt="Selenium" width="40" height="40">
                     <img src="images/icons8-jira.svg" alt="JIRA" width="40" height="40">
@@ -74,7 +74,6 @@
                     <img src="images/cypress.svg" alt="cypress" width="40" height="40">
                 </p>
                 <hr>
-
                 <h2 id="experience"><strong>Experience</strong></h2>
                 <h4 id="sdet">SDET</h4>
                 <h4 id=" Easiloan"><i>Easiloan Techno Solution Pvt. Ltd</i> </h4>
@@ -109,24 +108,33 @@
                 <h3 id="ExTC">Bachelor of engineering in electronics and telecommunication - (2019)</h3>
                 <p>Vishwaniketan's Institute of Management Entrepreneurship and Engineering Technology - University of Mumbai</p>
                 <hr>
-
             </div>
         </div>
     </section>
-
     <!--------------------------------------------------JS for toggle menu--------------------------------------------------------->
     <script>
         var navLinks = document.getElementById("navLinks");
-
         function showMenu() {
             navLinks.style.right = "0";
         }
-
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
-
     </script>
+    <script>
+        const scriptURL = < SCRIPT URL > "
+        const form document.forms['submit-to-google-sheet']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => console.log('Success!',
+                    .catch(error => console.error('Error!',
+                        response)) error.message))
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
-
 </html>
